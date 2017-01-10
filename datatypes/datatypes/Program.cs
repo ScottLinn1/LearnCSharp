@@ -15,22 +15,51 @@ namespace datatypes
         {
 
             // create a method  called  JoinStrings which takes in two strings then output the result to the console and
-            //return a string of these stings joined with a space  between them make sure it is public
+            // return a string of these strings joined with a space  between them make sure it is public
             // call JoinStrings with your first and last name
-
-
+            string myForename = "Scott";
+            string mySurname = "Linn";
+            string myFullName = JoinStrings(myForename, mySurname);
 
             // create a method  called  Arthimetic which takes in two  numbers and returns a result  of a  mathematical
-            //function which is also sent a a single character the result sould be  printed  to the console
+            // function which is also sent as a single character the result sould be printed  to the console
             // call  arithmetic with an example of each type of calculation
+            int firstNumber = 10;
+            int secondNumber = 5;
+            Arithmetic(firstNumber, secondNumber, "+");
 
-            //Create a method called WriteStringArray which writes the contents of an array to the colsole.
-            // call WriteStringArray with an array containign 3 strings
-
-
+            // Create a method called WriteStringArray which writes the contents of an array to the console.
+            // call WriteStringArray with an array containing 3 strings
 
         }
 
+        public static string JoinStrings(string Forename, string Surname)
+        {
+                string myString = Forename + " " + Surname;
+                Console.Write(myString);
+                return myString;                       
+        }
+        public static int Arithmetic(int number1, int number2, string oper)
+        {
+            int result = 0;
+                if (oper == "+")
+                {
+                    result = number1 + number2;
+                }
+                else if (oper == "-")
+                {
+                    result = number1 - number2;
+                }
+                else if (oper == "*")
+                {
+                    result = number1 * number2;
+                }
+                else if (oper == "/")
+                {
+                    result = number1 / number2;
+                }
+
+        }
 
     }
 }
